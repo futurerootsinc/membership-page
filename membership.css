@@ -1,0 +1,214 @@
+body {
+    padding:0;
+    margin:0;
+}
+
+
+@media (min-width:500px) {
+    #section1 {
+        height:500px !important;
+    }
+    #section2 {
+        height:600px !important;
+    }
+    #section3 {
+        height:600px !important;
+    }
+    #section5 {
+        height:600px !important;
+    }
+    #section6 {
+        height: 600px !important;
+    }
+}
+
+
+#section1 {
+    width:100vw;
+    padding:0;
+    background-color:rgb(0,102,203);
+    margin:0;
+    padding-top: 40px;
+    height:70vh;
+    position:relative;
+    background-image: url(assets/1.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#section2 {
+    font-size:20px;
+    width:100vw;
+    background-color:rgb(0,102,203);
+    height:100vh;
+    padding-top:100px;
+    position:relative;
+    background-image: url(assets/2_%20INTRO.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#section3 {
+    font-size:20px;
+    width:100vw;
+    background-color:rgb(243,229,137);
+    height:800px;
+    padding-top:200px;
+    position:relative;
+    background-image: url(assets/3_MEMBERSHIP%20LEVELS.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom:120px;
+}
+
+#section4 {
+    background-color:rgb(243,229,137);
+    width:100vw;
+    padding-bottom:50px;
+}
+
+#yellow_donor_box {
+    font-family: 'Myriad Pro';
+    text-align: center;
+    height:auto;
+    position:relative;
+    width:40%;
+    letter-spacing: -1px;
+    font-weight: 300;
+    font-size:28px;
+    background-color:white;
+    margin:0 auto;
+    padding:13px;
+    border:3px solid black;
+}
+
+#yellow_donor_box p {
+    margin:0;
+    margin-bottom:25px;
+}
+
+#love-button {
+    background-color:rgb(243,229,137);
+    width:46%;
+    border:3px solid black;
+    text-align: center;
+    display: inline-block;
+    margin:0 auto;
+    height:30px;
+    margin-bottom:20px;
+    padding:3px;
+}
+
+#heart_img {
+    height:80%;
+    vertical-align: middle;
+    padding:4px;
+}
+
+#rare-goods {
+    color:black;
+}
+
+
+#section5 {
+    background-color:rgb(240,73,54);
+    width:100vw;
+    height:70vh;
+    padding-top:120px;
+    height:74vh;
+    position:relative;
+    background-image: url(assets/5_SPONSORS.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#section6 {
+    background-color:rgb(240,73,54);
+    width:100vw;
+    height:70vh;
+    font-weight:300;
+    padding-top:120px;
+    height:74vh;
+    position:relative;
+    background-image: url(assets/6_.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#faq-holder {
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size:60px;
+    margin:0;
+    letter-spacing: 10px;
+    
+}
+#section7 {
+    color:white;
+    font-family: 'PT Sans';
+    text-align: center;
+    background-color:rgb(241,73,54);
+    padding-top: 15px;
+    padding-bottom: 50px;
+}
+
+#info-para-holder {
+    font-size:34px;
+    text-transform: uppercase;
+    width:95%;
+    margin:0 auto;
+    text-align: justify;
+}
+
+#info-para {
+    margin: 0;
+}
+
+@media (max-width:500px) {
+    #section1 {
+        height:200px;
+    }
+}
+
+
+
+.ticket-tab {
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.ticket-tab h3 {
+  display: table;
+  width: 100%;
+}
+.ticket-tab h3 span {
+  display: table-cell;
+  width: 2em;
+  font-size: 150%;
+}
+.ticket-tab h3:hover {
+  cursor: pointer;
+}
+.ticket-tab .ticket-info {
+  display: none;
+}
+.ticket-tab .ticket-info .btn {
+  min-width: 8em;
+  width: 8em;
+}
+.ticket-tab .ticket-info p {
+  padding-left: 3.5em;
+}
+.ticket-tab.open .ticket-info {
+  display: block;
+}
+.ticket-tab.close .ticket-info {
+  display: none;
+}

@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<?php
+/**
+ * Template Name: Membership
+ *
+ * This is the template that displays the membership page.
+ *
+ * @package dublab14
+ * @since dublab14 2.0
+ */
+?>
+ <?php get_header(); ?>
+
 <html>
     <head>
         <link rel="stylesheet" href="membership.css">
@@ -117,3 +128,5 @@
         <script src="other.js"></script>
     </body>
 </html>
+
+<?php get_footer(); ?>
