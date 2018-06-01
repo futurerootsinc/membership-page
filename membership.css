@@ -6,19 +6,19 @@ body {
 
 @media (min-width:500px) {
     #section1 {
-        height:500px !important;
+        height:auto;
     }
     #section2 {
-        height:600px !important;
+        height:auto;
     }
     #section3 {
-        height:600px !important;
+        height:auto;
     }
     #section5 {
-        height:600px !important;
+        height:auto;
     }
     #section6 {
-        height: 600px !important;
+        height: auto;
     }
 }
 
@@ -50,17 +50,27 @@ body {
     background-repeat: no-repeat;
 }
 
+#prize_table {
+    text-align: center;
+    width:100vw;
+}
+
+#prizes {
+    display:inline-block;
+    border:3px solid black;
+    margin:0 auto;
+    width:74%;
+    text-align: center;
+    box-shadow: 15px 15px rgb(187,176,105);
+}
+
 #section3 {
     font-size:20px;
     width:100vw;
     background-color:rgb(243,229,137);
-    height:800px;
+    height:auto;
     padding-top:200px;
-    position:relative;
-    background-image: url(assets/3_MEMBERSHIP%20LEVELS.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    position:relative;    
     padding-bottom:120px;
 }
 
@@ -83,6 +93,7 @@ body {
     margin:0 auto;
     padding:13px;
     border:3px solid black;
+    box-shadow: 10px 10px rgb(187,176,105);
 }
 
 #yellow_donor_box p {
