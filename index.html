@@ -18,8 +18,38 @@
         <section id="section2">
         </section>
         <section id="section3">
+            <h3 style="margin:0 auto; text-align: center;">click and become a member!</h3>
             <div id="prize_table">
-                <img id="prizes" src="./assets/3_MEMBERSHIP%20LEVELS.png">
+                <div id="center-img-holder">
+                    <img class="prizeimg" id="ticket" src="http://dublab.com/wp-content/uploads/2018/06/TICKETS.png">
+                    <img class="prizeimg" id="sticker" src="http://dublab.com/wp-content/uploads/2018/06/DUBLABBUMPER.png">
+                    <img class="prizeimg" id="ll" src="http://dublab.com/wp-content/uploads/2018/06/Low-Limit-Alley-T-Shirt-Long-Sleeve.png">
+                    <img class="prizeimg" id="tote" src="http://dublab.com/wp-content/uploads/2018/06/Frimkiss-TOTE.png">
+                    <img class="prizeimg" id="cup" src="http://dublab.com/wp-content/uploads/2018/06/MUG-1.png">
+                    <img class="prizeimg" id="pack" src="http://dublab.com/wp-content/uploads/2018/06/CARE-PACKAGE.png">
+                </div>
+                <div id="prize-holder">
+                    <div id="prize-images">
+                        <div id="prize-ticket" onmouseover="showImage('ticket');" onmouseout="hideImage();">
+                        </div>
+                        <div id="prize-sticker" onmouseover="showImage('sticker');" onmouseout="hideImage();">
+                        </div>
+                        <div id="prize-ll_shirt" onmouseover="showImage('ll');" onmouseout="hideImage();">
+                        </div>   
+                        <div id="prize-tote" onmouseover="showImage('tote');" onmouseout="hideImage();">
+                        </div>
+                        <div id="prize-cup" onmouseover="showImage('cup');" onmouseout="hideImage();">
+                        </div>
+                        <div id="prize-pack" onmouseover="showImage('pack');" onmouseout="hideImage();">
+                        </div>
+                    </div>
+                    <a href="https://dublab.myshopify.com/pages/membership-drive" id="level1" class="membership_level"></a>
+                    <a href="https://dublab.myshopify.com/pages/5-monthly-membership" id="level2" class="membership_level"></a>
+                    <a href="https://dublab.myshopify.com/pages/10-monthly-membership" id="level3" class="membership_level"></a>
+                    <a href="https://dublab.myshopify.com/pages/20-monthly-membership" id="level4" class="membership_level"></a>
+                    <a href="https://dublab.myshopify.com/pages/30-monthly-membership" id="level5" class="membership_level"></a>
+                    <img id="prizes" src="./assets/3_MEMBERSHIP%20LEVELS.png">
+                </div>
             </div>
         </section>
         <section id="section4">
@@ -117,5 +147,26 @@
           crossorigin="anonymous">
         </script>
         <script src="other.js"></script>
+        <script>
+            function showImage(img1) {
+                var list = document.getElementsByClassName('prizeimg');
+                for (var i = 0; i < list.length; i++) {
+                    list[i].style.display = "none";
+                }
+                console.log('all prize images should be hidden.');
+                var toShow = document.getElementById(img1);
+                toShow.style.display = "block";
+                console.log(img1+' showed.')
+            }
+            
+            function hideImage() {
+                var alist = document.getElementsByClassName('prizeimg');
+                for (var i = 0; i < alist.length; i++) {
+                    alist[i].style.display = "none";
+                    console.log(alist[1])
+                }
+                console.log('all prize images should be hidden.');
+            }
+        </script>
     </body>
 </html>

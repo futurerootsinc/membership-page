@@ -7,14 +7,32 @@
  * @package dublab14
  * @since dublab14 2.0
  */
-?>
- <?php get_header(); ?>
+ ?>
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta name="viewport" content="width=device-width" />
+<title>DUBLAB Membership Drive</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<!--[if lt IE 9]>
+<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
+<![endif]-->
 
-<html>
-    <head>
-        <link rel="stylesheet" href="membership.css">
+<?php mp3j_addscripts(); ?>
+
+<?php wp_head(); ?>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.backstretch.min.js"></script>
+    
+
         <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/membership.css" />
+        <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/style-drive.css" />
         <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -22,6 +40,27 @@
 
     </head>
     <body>
+        <div id="drive-menu">
+		  <div class="container">
+            <nav id="happy">
+                 <ul id="menu-items">
+                     <li id="menu-item-1"><a href="http://dublab.com/schedule/">broadcast schedule</a></li>
+                     <li id="menu-item-2"><a href="http://dublab.com/home">dublab site</a></li>
+                </ul> 
+            </nav>
+		</div>
+	
+	</div><!-- #drive-menu -->
+        <div id="player-band">
+		<div class="container">
+			<div id="dublab-player" class="twelve columns">
+			<?php //include player
+				dynamic_sidebar('player-area');
+			?>
+				<div class="stream-link"><a href="//dublab.com/streams/dubstream.m3u" title="listen in your player">&nbsp;</a></div>	
+			</div>
+		</div><!--container-->
+	</div><!--player-band-->
         <section id="section1">
             <div id="screenwidth">
             </div>
@@ -29,8 +68,38 @@
         <section id="section2">
         </section>
         <section id="section3">
+            <h2 style="margin:0 auto; text-align: center; margin-bottom:40px;">click a column below and become a member!</h2>
             <div id="prize_table">
-                <img src="./assets/3_MEMBERSHIP%20LEVELS.png">
+                <div id="center-img-holder">
+                    <img class="prizeimg" id="ticket" src="http://dublab.com/wp-content/uploads/2018/06/TICKETS-1024x973-1.png">
+                    <img class="prizeimg" id="sticker" src="http://dublab.com/wp-content/uploads/2018/06/DUBLABBUMPER.png">
+                    <img class="prizeimg" id="ll" src="http://dublab.com/wp-content/uploads/2018/06/1999-tee.png">
+                    <img class="prizeimg" id="tote" src="http://dublab.com/wp-content/uploads/2018/06/Frimkiss-TOTE.png">
+                    <img class="prizeimg" id="cup" src="http://dublab.com/wp-content/uploads/2018/06/MUG-1.png">
+                    <img class="prizeimg" id="pack" src="http://dublab.com/wp-content/uploads/2018/06/CARE-PACKAGE.png">
+                </div>
+                <div id="prize-holder">
+                    <div id="prize-images">
+                        <div id="prize-ticket" onmouseover="showImage('ticket');" onmouseout="hideImage();">
+                        </div>
+                        <div id="prize-sticker" onmouseover="showImage('sticker');" onmouseout="hideImage();">
+                        </div>
+                        <div id="prize-ll_shirt" onmouseover="showImage('ll');" onmouseout="hideImage();">
+                        </div>   
+                        <div id="prize-tote" onmouseover="showImage('tote');" onmouseout="hideImage();">
+                        </div>
+                        <div id="prize-cup" onmouseover="showImage('cup');" onmouseout="hideImage();">
+                        </div>
+                        <div id="prize-pack" onmouseover="showImage('pack');" onmouseout="hideImage();">
+                        </div>
+                    </div>
+                    <a href="https://dublab.myshopify.com/pages/membership-drive" id="level1" class="membership_level"></a>
+                    <a href="https://dublab.myshopify.com/pages/5-monthly-membership" id="level2" class="membership_level"></a>
+                    <a href="https://dublab.myshopify.com/pages/10-monthly-membership" id="level3" class="membership_level"></a>
+                    <a href="https://dublab.myshopify.com/pages/20-monthly-membership" id="level4" class="membership_level"></a>
+                    <a href="https://dublab.myshopify.com/pages/30-monthly-membership" id="level5" class="membership_level"></a>
+                    <img id="prizes" src="http://dublab.com/wp-content/uploads/2018/06/LEVELS.png">
+                </div>
             </div>
         </section>
         <section id="section4">
@@ -39,7 +108,7 @@
                 </p>
                 <a href="https://dublab.myshopify.com/">
                     <div id="love-button">
-                        <img id="heart_img" src="assets/4_ONE-TIME_DONATION/heart.png">
+                        <img id="heart_img" src="http://dublab.com/wp-content/uploads/2018/06/heart.png">
                     </div>
                 </a>
             </div>
@@ -127,8 +196,29 @@
           integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
           crossorigin="anonymous">
         </script>
-        <script src="other.js"></script>
+        <script>
+            function showImage(img1) {
+                var list = document.getElementsByClassName('prizeimg');
+                for (var i = 0; i < list.length; i++) {
+                    list[i].style.display = "none";
+                }
+                var toShow = document.getElementById(img1);
+                toShow.style.display = "block";
+            }
+            
+            function hideImage() {
+                var alist = document.getElementsByClassName('prizeimg');
+                for (var i = 0; i < alist.length; i++) {
+                    alist[i].style.display = "none";
+                    console.log(alist[1])
+                }
+            }
+        </script>
+        <script src="<?php bloginfo('stylesheet_directory'); ?>/other.js"></script>
+        <?php do_action('wp_footer'); ?>
     </body>
+    
+    
+
 </html>
 
-<?php get_footer(); ?>

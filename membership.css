@@ -1,6 +1,14 @@
+html {
+    height:100%;
+    width:100%;
+}
+
 body {
     padding:0;
     margin:0;
+    height: 100%;
+    width:100%;
+    position:relative;
 }
 
 
@@ -24,14 +32,14 @@ body {
 
 
 #section1 {
-    width:100vw;
+    width:100%;
     padding:0;
     background-color:rgb(0,102,203);
     margin:0;
     padding-top: 40px;
     height:70vh;
     position:relative;
-    background-image: url(assets/1.png);
+    background-image: url(http://dublab.com/wp-content/uploads/2018/06/1.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,44 +47,83 @@ body {
 
 #section2 {
     font-size:20px;
-    width:100vw;
+    width:100%;
     background-color:rgb(0,102,203);
     height:100vh;
     padding-top:100px;
     position:relative;
-    background-image: url(assets/2_%20INTRO.png);
+    background-image: url(http://dublab.com/wp-content/uploads/2018/06/2_-INTRO.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 #prize_table {
-    text-align: center;
-    width:100vw;
+    width:74%;
+    margin: 0 auto;
+    position: relative;
+    height:100%;
+}
+
+#prize-holder {
+    height:100%;
 }
 
 #prizes {
     display:inline-block;
     border:3px solid black;
     margin:0 auto;
-    width:74%;
+    width:100%;
     text-align: center;
     box-shadow: 15px 15px rgb(187,176,105);
 }
 
+.membership_level {
+    position: absolute;
+    display: inline-block;
+    width: 16.7%;
+    height:100%;
+}
+
+#level1 {
+    left: 16.9%;
+}
+
+#level2 {
+    left:33.6%;
+}
+
+#level3 {
+    left:50.4%;
+}
+
+#level4 {
+    left:67.4%;
+}
+
+#level5 {
+    left:84%;
+}
+
 #section3 {
     font-size:20px;
-    width:100vw;
+    width:100%;
     background-color:rgb(243,229,137);
     height:auto;
-    padding-top:200px;
+    padding-top:50px;
     position:relative;    
     padding-bottom:120px;
 }
 
+#prize-images {
+    position: absolute;
+    height:100%;
+    width: 16.66%;
+}
+
 #section4 {
     background-color:rgb(243,229,137);
-    width:100vw;
+    width:100%;
     padding-bottom:50px;
 }
 
@@ -85,7 +132,7 @@ body {
     text-align: center;
     height:auto;
     position:relative;
-    width:40%;
+    width:42vw;
     letter-spacing: -1px;
     font-weight: 300;
     font-size:28px;
@@ -116,7 +163,6 @@ body {
 
 #heart_img {
     height:80%;
-    vertical-align: middle;
     padding:4px;
 }
 
@@ -127,12 +173,12 @@ body {
 
 #section5 {
     background-color:rgb(240,73,54);
-    width:100vw;
+    width:100%;
     height:70vh;
     padding-top:120px;
     height:74vh;
     position:relative;
-    background-image: url(assets/5_SPONSORS.png);
+    background-image: url(http://dublab.com/wp-content/uploads/2018/06/5_SPONSORS.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -140,13 +186,13 @@ body {
 
 #section6 {
     background-color:rgb(240,73,54);
-    width:100vw;
+    width:100%;
     height:70vh;
     font-weight:300;
     padding-top:120px;
     height:74vh;
     position:relative;
-    background-image: url(assets/6_.png);
+    background-image: url(http://dublab.com/wp-content/uploads/2018/06/6_-SPONSORS.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -177,8 +223,30 @@ h1 {
     text-transform: uppercase;
     width:95%;
     margin:0 auto;
+    margin-top:40px;
+    margin-bottom:25px;
     text-align: justify;
 }
+
+#center-img-holder {
+    position:absolute;
+    height:60%;
+    z-index: 10;
+    width:60%;
+    top:20%;
+    left:20%;
+    //border:1px solid black;
+}
+
+#center-img-holder img {
+    display:none;
+    max-width:100%;
+    max-height:100%;
+    margin:0 auto;
+    transition: display .4s;
+}
+
+
 
 #info-para {
     margin: 0;
@@ -188,6 +256,129 @@ h1 {
     #section1 {
         height:200px;
     }
+}
+
+
+#menu-items {
+    margin: 0 auto;
+    display:flex;
+    height:40px;
+    font-size:20px;
+    line-height:40px;
+    flex-flow: row;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+#menu-item-1 {
+    color:white !important;
+    list-style-type: none;
+}
+
+#menu-item-2 {
+    color:white !important;
+    list-style-type: none;
+}
+
+#menu-item-1 a, #menu-item-2 a {
+    color:white !important;
+}
+
+
+#player-band {
+    border-bottom:2px solid white;
+}
+
+
+#prize-ticket {
+    width:100%;
+    height:14.4%;
+    position:absolute;
+    top:14.4%;
+    cursor: pointer;
+}
+
+#prize-sticker {
+    width:100%;
+    height:14.3%;
+    position:absolute;
+    top:28.8%;
+    cursor: pointer;
+}
+
+#prize-ll_shirt {
+    width:100%;
+    height:14.3%;
+    position:absolute;
+    top:43%;
+    cursor: pointer;
+}
+
+#prize-tote {
+    width:100%;
+    height:14.3%;
+    position:absolute;
+    top:57.4%;
+    cursor: pointer;
+}
+
+#prize-cup {
+    width:100%;
+    height:14.3%;
+    position:absolute;
+    top:71%;
+    cursor: pointer;
+}
+
+#prize-pack {
+    width:100%;
+    height:14.3%;
+    position:absolute;
+    top:85%;
+    cursor: pointer;
+}
+
+#prize-ticket:hover {
+
+}
+#prize-sticker:hover {
+    
+}
+#prize-ll_shirt:hover {
+    
+}
+#prize-tote:hover {
+    
+}
+#prize-cup:hover {
+    
+}
+#prize-pack:hover {
+    
+}
+
+#ticket {
+    
+}
+
+#sticker {
+    
+}
+
+#ll_shirt {
+    
+}
+
+#tote {
+    
+}
+
+#cup {
+    
+}
+
+#pack {
+    
 }
 
 
